@@ -8,7 +8,6 @@ import {
   PerspectiveCamera,
   WebGLRenderer,
   PointLight,
-  AmbientLight,
   MeshLambertMaterial
 } from "three";
 // const THREE = require("three");
@@ -86,7 +85,9 @@ export default {
   mounted() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.$el.appendChild(this.renderer.domElement);
-    this.camera.position.set(-20, 15, 30);
+    this.camera.position.y = 15;
+    // this.camera.position.set(-20, 15, 30);
+    this.camera.position.z = 30;
     this.scene.add(this.camera);
 
     this.lights.forEach(light => {
@@ -98,8 +99,6 @@ export default {
       sceneLight.position.set(...light.position);
       this.scene.add(sceneLight);
     });
-    const ambientLight = new AmbientLight(0xffffff, 2);
-    this.scene.add(ambientLight);
     this.loadGLTF(this.model.geometry.url).then(gltf => {
       this.bust = gltf.scene.children[0];
       this.bust.traverse(
@@ -139,12 +138,9 @@ export default {
     handleResize() {
       this.renderer.setSize(window.innerWidth, window.innerHeight);
       this.camera.aspect = window.innerWidth / window.innerHeight;
-      //   cancelAnimationFrame(this.animate);
-      //   this.renderer.render(this.scene, this.camera);
-      //   requestAnimationFrame(this.animate);
+      this.camera.updateProjectionMatrix();
     },
     handleRoute() {
-      // this.statueRotation.y = this.pageRotation;
       TweenLite.to(this.statueRotation, 1, {
         y: this.pageRotation
       });
@@ -157,8 +153,9 @@ export default {
 .hercules {
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: -1;
+  left: 45vw;
+  z-index: -2;
+  background: #efefef;
 }
 canvas {
   mix-blend-mode: overlay;

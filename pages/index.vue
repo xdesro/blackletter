@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      statueRotation: -.5,
+      statueRotation: 0.0,
       title: "",
       backgroundText: ["summer 2019", "horizontal"]
     };

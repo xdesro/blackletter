@@ -21,7 +21,7 @@
 export default {
   data() {
     return {
-      statueRotation: -1.1
+      statueRotation: -0.6
     };
   },
   asyncData() {
