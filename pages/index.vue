@@ -26,14 +26,6 @@ export default {
       backgroundText: ["summer 2019", "horizontal"]
     };
   },
-  asyncData() {
-    return {};
-  },
-  head() {
-    return {
-      title: this.title
-    };
-  },
   mounted() {
     this.$store.commit("SET_PAGE_TITLE", this.title);
     this.$store.commit("SET_BACKGROUND_TEXT", this.backgroundText);

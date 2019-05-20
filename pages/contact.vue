@@ -21,18 +21,9 @@
 export default {
   data() {
     return {
-      statueRotation: -0.6
-    };
-  },
-  asyncData() {
-    return {
+      statueRotation: -0.6,
       title: "contact",
       backgroundText: ["contact–", "vertical"]
-    };
-  },
-  head() {
-    return {
-      title: this.title
     };
   },
   mounted() {
@@ -42,6 +33,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

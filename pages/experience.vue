@@ -20,18 +20,9 @@
 export default {
   data() {
     return {
-      statueRotation: -0.4
-    };
-  },
-  asyncData() {
-    return {
+      statueRotation: -0.4,
       title: "experience",
       backgroundText: ["experience–", "vertical"]
-    };
-  },
-  head() {
-    return {
-      title: this.title
     };
   },
   mounted() {

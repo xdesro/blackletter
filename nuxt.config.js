@@ -3,7 +3,7 @@ import pkg from "./package";
 export default {
   mode: "universal",
   head: {
-    title: pkg.name,
+    title: `Henry Desroches | Creative Developer`,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
