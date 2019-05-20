@@ -10,7 +10,6 @@ import {
   PointLight,
   MeshLambertMaterial
 } from "three";
-// const THREE = require("three");
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 import TweenLite from "gsap/umd/TweenLite";
@@ -22,7 +21,6 @@ export default {
       model: {
         geometry: {
           url: require("~/assets/models/hercules.gltf")
-          // url: gltfUrl
         },
         material: {
           color: 0x222222
@@ -86,7 +84,6 @@ export default {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.$el.appendChild(this.renderer.domElement);
     this.camera.position.y = 15;
-    // this.camera.position.set(-20, 15, 30);
     this.camera.position.z = 30;
     this.scene.add(this.camera);
 
@@ -142,7 +139,8 @@ export default {
     },
     handleRoute() {
       TweenLite.to(this.statueRotation, 1, {
-        y: this.pageRotation
+        y: this.pageRotation,
+        ease: Power2.easeOut
       });
     }
   }
