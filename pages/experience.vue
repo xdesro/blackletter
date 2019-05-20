@@ -20,7 +20,7 @@
 export default {
   data() {
     return {
-      statueRotation: -0.4,
+      statueRotation: -0.6,
       title: "experience",
       backgroundText: ["experience–", "vertical"]
     };

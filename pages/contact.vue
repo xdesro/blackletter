@@ -21,7 +21,7 @@
 export default {
   data() {
     return {
-      statueRotation: -0.6,
+      statueRotation: -0.8,
       title: "contact",
       backgroundText: ["contact–", "vertical"]
     };

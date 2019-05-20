@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      statueRotation: -0.2,
+      statueRotation: -0.4,
       title: "work",
       backgroundText: ["work–", "vertical"]
     };

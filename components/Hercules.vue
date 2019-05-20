@@ -136,9 +136,9 @@ export default {
       });
     },
     handleResize() {
-      this.renderer.setSize(window.innerWidth, window.innerHeight);
       this.camera.aspect = window.innerWidth / window.innerHeight;
       this.camera.updateProjectionMatrix();
+      this.renderer.setSize(window.innerWidth, window.innerHeight);
     },
     handleRoute() {
       TweenLite.to(this.statueRotation, 1, {
