@@ -4,6 +4,9 @@ export const state = () => {
     backgroundText: {
       text: "Summer 2019",
       layout: "horizontal"
+    },
+    statueRotation: {
+      y: 0
     }
   };
 };
@@ -17,5 +20,8 @@ export const mutations = {
       text: backgroundSettings[0],
       layout: backgroundSettings[1]
     };
+  },
+  SET_STATUE_ROTATION(state, rotation) {
+    state.statueRotation.y = rotation;
   }
 };

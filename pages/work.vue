@@ -29,8 +29,9 @@
 
 <script>
 export default {
-  asyncData() {
+  data() {
     return {
+      statueRotation: -95,
       title: "work",
       backgroundText: ["work–", "vertical"]
     };
@@ -43,6 +44,7 @@ export default {
   mounted() {
     this.$store.commit("SET_PAGE_TITLE", this.title);
     this.$store.commit("SET_BACKGROUND_TEXT", this.backgroundText);
+    this.$store.commit("SET_STATUE_ROTATION", this.statueRotation);
   }
 };
 </script>

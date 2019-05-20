@@ -34,7 +34,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/pwa"],
+  // modules: ["@nuxtjs/pwa"],
 
   /*
    ** Build configuration
@@ -51,6 +51,14 @@ export default {
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
           exclude: /(node_modules)/
+        });
+        config.module.rules.push({
+          test: /\.(gltf)$/,
+          loader: "gltf-webpack-loader"
+        });
+        config.module.rules.push({
+          test: /\.(bin)$/,
+          loader: "file-loader"
         });
       }
     }

@@ -14,20 +14,20 @@
 </template>
 
 <script>
-// import Logo from "~/components/Logo.vue";
-
 export default {
-  components: {
-    // Logo
+  transition: {
+    name: "test",
+    mode: "out-in"
   },
   data() {
-    return {};
-  },
-  asyncData() {
     return {
+      statueRotation: 13,
       title: "",
       backgroundText: ["summer 2019", "horizontal"]
     };
+  },
+  asyncData() {
+    return {};
   },
   head() {
     return {
@@ -37,19 +37,12 @@ export default {
   mounted() {
     this.$store.commit("SET_PAGE_TITLE", this.title);
     this.$store.commit("SET_BACKGROUND_TEXT", this.backgroundText);
+    this.$store.commit("SET_STATUE_ROTATION", this.statueRotation);
   }
 };
 </script>
 
 <style lang="scss">
-.main {
-  height: 100vh;
-  display: inline-grid;
-  margin: 0 auto;
-  place-items: center;
-  position: relative;
-  z-index: 1;
-}
 .hero {
   font-size: 32px;
   margin: 0 auto;
@@ -64,7 +57,7 @@ export default {
   }
   &__name {
     text-align: center;
-    font-size: 164px;
+    font-size: 150px;
     font-family: var(--font-blackletter);
     margin-bottom: 40px;
     line-height: 0.93;

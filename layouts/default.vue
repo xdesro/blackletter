@@ -3,6 +3,9 @@
     <Header/>
     <nuxt/>
     <BackgroundText text="Summer 2019"/>
+    <no-ssr>
+      <Hercules/>
+    </no-ssr>
   </div>
 </template>
 
@@ -10,77 +13,17 @@
 // import _ from "lodash";
 import Header from "~/components/Header";
 import BackgroundText from "~/components/BackgroundText";
+import Hercules from "~/components/Hercules";
 export default {
   components: {
     Header,
-    BackgroundText
-  },
-  data() {
-    return {};
+    BackgroundText,
+    Hercules
   }
 };
 </script>
 
 
 <style lang="scss">
-@font-face {
-  font-family: "Founders Grotesk";
-  src: url("~assets/fonts/founders-grotesk/FoundersGrotTest-Bold.woff");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Hartwig-Schrift";
-  src: url("~assets/fonts/hartwig-schrift/hartwig-schrift-webfont.woff2")
-      format("woff2"),
-    url("~assets/fonts/hartwig-schrift/hartwig-schrift-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-:root {
-  --font-blackletter: "Hartwig-Schrift", var(--font-sans--accent);
-  --font-sans--accent: "Founders Grotesk", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-sans: "San Francisco Display", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  color: #030303;
-}
-body {
-  -webkit-overflow-scrolling: auto;
-  background: #efefef;
-  // height: calc(100vh + 100px);
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-.app {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  z-index: 1;
-  display: grid;
-}
+@import "~assets/scss/index";
 </style>
