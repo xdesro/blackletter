@@ -140,7 +140,7 @@ export default {
     handleRoute() {
       TweenLite.to(this.statueRotation, 1, {
         y: this.pageRotation,
-        ease: Power2.easeOut
+        ease: Power2.easeInOut
       });
     }
   }
