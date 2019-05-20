@@ -6,7 +6,9 @@
         <p>I’ve been in interaction- and CSS-focused UI development gigs since 2015, most recently working at Promontech and Universal Mind. I’m really into SCSS, Vue, and JAMstack architecture.</p>
         <p>
           I’m always open to new opportunities in creative dev or style-code-/UI-centric roles. Check out
-          <a href="#">my resume</a>, and
+          <a
+            href="#"
+          >my resume</a>, and
           <nuxt-link to="/contact">let’s chat</nuxt-link>!
         </p>
       </section>
@@ -16,6 +18,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      statueRotation: -0.9
+    };
+  },
   asyncData() {
     return {
       title: "experience",
@@ -30,6 +37,7 @@ export default {
   mounted() {
     this.$store.commit("SET_PAGE_TITLE", this.title);
     this.$store.commit("SET_BACKGROUND_TEXT", this.backgroundText);
+    this.$store.commit("SET_STATUE_ROTATION", this.statueRotation);
   }
 };
 </script>

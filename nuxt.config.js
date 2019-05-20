@@ -43,16 +43,17 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    transpile: ["three/examples/jsm/loaders/GLTFLoader"],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
+          loader: "eslint-loader"
         });
         config.module.rules.push({
+          enforce: "pre",
           test: /\.(gltf)$/,
           loader: "gltf-webpack-loader"
         });

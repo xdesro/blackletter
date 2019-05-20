@@ -17,33 +17,6 @@
   </nav>
 </template>
 
-<script>
-export default {
-  mounted() {
-    // this.emitNextActiveRoute();
-  },
-  updated() {
-    // this.emitNextActiveRoute();
-  },
-  methods: {
-    emitNextActiveRoute() {
-      const activeClass = $nuxt.$router.options.linkActiveClass;
-      const currentActive = this.$children.find(child => {
-        return child.$el.classList.contains(activeClass);
-      });
-      const currentActiveIndex = this.$children.indexOf(currentActive);
-      const nextActiveRoute = this.$children[
-        currentActiveIndex + 1 > this.$children.length
-          ? 0
-          : currentActiveIndex + 1
-      ].$props.to;
-      console.log(nextActiveRoute);
-    }
-  }
-};
-</script>
-
-
 <style lang="scss">
 .nav {
   text-align: right;

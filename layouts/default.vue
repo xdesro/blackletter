@@ -10,10 +10,10 @@
 </template>
 
 <script>
-// import _ from "lodash";
 import Header from "~/components/Header";
 import BackgroundText from "~/components/BackgroundText";
 import Hercules from "~/components/Hercules";
+
 export default {
   components: {
     Header,
@@ -27,3 +27,4 @@ export default {
 <style lang="scss">
 @import "~assets/scss/index";
 </style>
+ 

@@ -11,10 +11,9 @@ import {
   AmbientLight,
   MeshLambertMaterial
 } from "three";
+// const THREE = require("three");
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-// import { GLTFLoader } from "three-gltf-loader";
 
-// import { TweenLite, Power2 } from "gsap/all";
 import TweenLite from "gsap/umd/TweenLite";
 import { Power2 } from "gsap/umd/EasePack";
 
@@ -23,7 +22,8 @@ export default {
     return {
       model: {
         geometry: {
-          url: ""
+          url: require("~/assets/models/hercules.gltf")
+          // url: gltfUrl
         },
         material: {
           color: 0x222222
@@ -60,6 +60,7 @@ export default {
         }
       ],
       initialRotation: { y: 0 },
+      statueRotation: { y: this.$store.state.statueRotation.y },
       scene: new Scene(),
       renderer: new WebGLRenderer({ alpha: true }),
       camera: new PerspectiveCamera(75, this.aspectRatio, 0.1, 1000),
@@ -79,12 +80,8 @@ export default {
   },
   watch: {
     pageRotation() {
-      //   console.log("updated");
-      //   this.handleRoute;
+      this.handleRoute();
     }
-  },
-  asyncData() {
-    return {};
   },
   mounted() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -112,9 +109,11 @@ export default {
       this.scene.add(this.bust);
       this.animate();
     });
-
     document.addEventListener("mousemove", this.handleMouseMove);
     window.addEventListener("resize", this.handleResize);
+  },
+  beforeDestroy() {
+    cancelAnimationFrame(this.animate);
   },
   methods: {
     loadGLTF(url) {
@@ -123,17 +122,17 @@ export default {
       });
     },
     animate() {
-      this.bust.traverse(
-        object =>
-          (object.rotation.y = this.pageRotation + this.initialRotation.y)
-      );
+      this.bust.traverse(object => {
+        object.rotation.y = this.statueRotation.y;
+      });
       this.renderer.render(this.scene, this.camera);
       requestAnimationFrame(this.animate);
     },
     handleMouseMove(e) {
-      const percentX = e.pageX / window.innerWidth / 3;
-      TweenLite.to(this.initialRotation, 1, {
-        y: percentX,
+      const percentX = (e.pageX - window.innerWidth / 2) / window.innerWidth;
+      const newTweenTo = this.pageRotation + percentX / 10;
+      TweenLite.to(this.statueRotation, 2, {
+        y: newTweenTo,
         ease: Power2.easeOut
       });
     },
@@ -143,6 +142,12 @@ export default {
       //   cancelAnimationFrame(this.animate);
       //   this.renderer.render(this.scene, this.camera);
       //   requestAnimationFrame(this.animate);
+    },
+    handleRoute() {
+      // this.statueRotation.y = this.pageRotation;
+      TweenLite.to(this.statueRotation, 1, {
+        y: this.pageRotation
+      });
     }
   }
 };
