@@ -24,9 +24,6 @@ export default {
       return this.$store.state.navAlignTop;
     }
   },
-  mounted() {
-    console.log(this.navAlignTop);
-  }
 };
 </script>
 

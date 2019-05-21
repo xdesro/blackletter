@@ -1,5 +1,6 @@
 <template>
-  <PageContent :page-title="pageTitle" :page-number="pageNumber">
+  <!-- <PageContent :page-title="pageTitle" :page-number="pageNumber"> -->
+  <section class="page__content">
     <p>
       I’m most active and reachable
       <a href="https://twitter.com/xdesro">on Twitter</a> or
@@ -18,16 +19,17 @@
         </a>
       </li>
     </ul>
-  </PageContent>
+    <!-- </PageContent> -->
+  </section>
 </template>
 
 <script>
-import PageContent from "~/components/PageContent";
+// import PageContent from "~/components/PageContent";
 import Icon from "~/components/Icon";
 
 export default {
   components: {
-    PageContent,
+    // PageContent,
     Icon
   },
   data() {

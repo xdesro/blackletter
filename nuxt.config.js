@@ -13,36 +13,24 @@ export default {
   },
   router: {
     linkActiveClass: "nav__link--active",
-    scrollBehavior: () => ({ x: 0, y: 50 })
+    extendRoutes(routes, resolve) {
+      let index = routes.findIndex(route => route.name === "index");
+      routes[index] = {
+        ...routes[index],
+        components: {
+          default: routes[index].component,
+          hero: resolve(__dirname, "components/Hero.vue")
+        },
+        chunkNames: {
+          hero: "components/Hero"
+        }
+      };
+    }
   },
-
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: "#fff" },
-
-  /*
-   ** Global CSS
-   */
-  css: [],
-
-  /*
-   ** Plugins to load before mounting the App
-   */
+  loading: { color: "#030303" },
+  css: ["~/assets/scss/main.scss"],
   plugins: [],
-
-  /*
-   ** Nuxt.js modules
-   */
-  // modules: ["@nuxtjs/pwa"],
-
-  /*
-   ** Build configuration
-   */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     transpile: ["three/examples/jsm/loaders/GLTFLoader"],
     extend(config, ctx) {
       // Run ESLint on save

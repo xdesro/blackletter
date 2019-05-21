@@ -1,5 +1,5 @@
 <template>
-  <PageContent :page-title="pageTitle" :page-number="pageNumber">
+  <section class="page__content">
     <p>I’ve been in interaction- and CSS-focused UI development gigs since 2015, most recently working at Promontech and Universal Mind. I’m really into SCSS, Vue, and JAMstack architecture.</p>
     <p>
       I’m always open to new opportunities in creative dev or style-code-/UI-centric roles. Check out
@@ -8,13 +8,11 @@
       >my resume</a>, and
       <nuxt-link to="/contact">let’s chat</nuxt-link>!
     </p>
-  </PageContent>
+  </section>
 </template>
 
 <script>
-import PageContent from "~/components/PageContent";
 export default {
-  components: { PageContent },
   data() {
     return {
       statueRotation: -0.6,

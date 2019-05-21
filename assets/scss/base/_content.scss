@@ -67,9 +67,9 @@ a {
     -webkit-text-stroke: 1px #666;
     padding: 0 1rem;
     text-transform: uppercase;
-    &:after {
-      content: "\2014";
-    }
+    // &:after {
+    //   content: "\2014";
+    // }
     @include screen(sm) {
       display: none;
     }

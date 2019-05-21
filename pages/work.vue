@@ -1,6 +1,7 @@
 <template>
   <!-- <main class="main"> -->
-  <PageContent :page-title="pageTitle" :page-number="pageNumber">
+  <!-- <PageContent :page-title="pageTitle" :page-number="pageNumber"> -->
+  <section class="page__content">
     <p>
       I’ve designed and coded projects ranging from Dungeons &amp; Dragons
       <a
@@ -18,13 +19,15 @@
         href="https://github.com/xdesro/threejs-webpack-starter"
       >boilerplate</a>.
     </p>
-  </PageContent>
+  </section>
+
+  <!-- </PageContent> -->
 </template>
 
 <script>
-import PageContent from "~/components/PageContent";
+// import PageContent from "~/components/PageContent";
 export default {
-  components: { PageContent },
+  // components: { PageContent },
   data() {
     return {
       statueRotation: -0.4,
