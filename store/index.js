@@ -7,7 +7,8 @@ export const state = () => {
     },
     statueRotation: {
       y: 0
-    }
+    },
+    navAlignTop: false
   };
 };
 
@@ -23,5 +24,8 @@ export const mutations = {
   },
   SET_STATUE_ROTATION(state, rotation) {
     state.statueRotation.y = rotation;
+  },
+  SET_NAV_ALIGNMENT(state, alignment) {
+    state.navAlignTop = alignment;
   }
 };

@@ -1,5 +1,9 @@
 <template>
-  <div class="hercules"></div>
+  <div class="hercules">
+    <transition name="hercules">
+      <div v-if="loaded" ref="container" class="hercules__inner"></div>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -7,6 +11,7 @@ import {
   Scene,
   PerspectiveCamera,
   WebGLRenderer,
+  AmbientLight,
   PointLight,
   MeshLambertMaterial
 } from "three";
@@ -18,6 +23,7 @@ import { Power2 } from "gsap/umd/EasePack";
 export default {
   data() {
     return {
+      loaded: false,
       model: {
         geometry: {
           url: require("~/assets/models/hercules.gltf")
@@ -76,13 +82,16 @@ export default {
     }
   },
   watch: {
+    aspectRatio() {
+      this.camera.aspect = this.aspectRatio;
+      this.camera.updateProjectionMatrix();
+    },
     pageRotation() {
       this.handleRoute();
     }
   },
   mounted() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.$el.appendChild(this.renderer.domElement);
     this.camera.position.y = 15;
     this.camera.position.z = 30;
     this.scene.add(this.camera);
@@ -96,6 +105,10 @@ export default {
       sceneLight.position.set(...light.position);
       this.scene.add(sceneLight);
     });
+
+    const ambientLight = new AmbientLight(0xffffff, 0.2);
+    this.scene.add(ambientLight);
+
     this.loadGLTF(this.model.geometry.url).then(gltf => {
       this.bust = gltf.scene.children[0];
       this.bust.traverse(
@@ -103,7 +116,13 @@ export default {
           (object.material = new MeshLambertMaterial(this.model.material))
       );
       this.scene.add(this.bust);
+      this.loaded = true;
       this.animate();
+      this.$nextTick(() => {
+        this.camera.aspect = this.aspectRatio;
+        this.camera.updateProjectionMatrix();
+        this.$refs.container.appendChild(this.renderer.domElement);
+      });
     });
     document.addEventListener("mousemove", this.handleMouseMove);
     window.addEventListener("resize", this.handleResize);
@@ -153,9 +172,21 @@ export default {
   top: 0;
   left: 45vw;
   z-index: -2;
+  opacity: 0.3;
   background: #efefef;
 }
-canvas {
-  mix-blend-mode: overlay;
+.hercules-enter-active,
+.hercules-leave-active {
+  transition: all 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hercules-enter,
+.hercules-leave-to {
+  opacity: 0;
+  transform: translateX(40vw);
+}
+.hercules-leave,
+.hercules-enter-to {
+  opacity: 1;
+  transform: translateX(0);
 }
 </style>

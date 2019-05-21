@@ -1,0 +1,97 @@
+html {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #030303;
+}
+body {
+  -webkit-overflow-scrolling: auto;
+  background: #efefef;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+  display: grid;
+}
+.main {
+  // height: auto;
+  display: inline-grid;
+  justify-content: center;
+  position: relative;
+  margin: 30vh auto;
+  z-index: 1;
+  @include screen(sm) {
+    margin: 25vh auto;
+  }
+}
+
+.page {
+  &__counter {
+    font-size: 16vw;
+    font-family: var(--font-sans--accent);
+    padding: 0 1rem;
+    line-height: 0.6;
+    @include screen(sm) {
+      font-size: 220px;
+      line-height: 0.9;
+    }
+  }
+  &__title {
+    line-height: 0.9;
+    margin-bottom: 40px;
+    font-family: var(--font-sans--accent);
+    font-size: 16vw;
+    color: #030303;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #666;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    &:after {
+      content: "\2014";
+    }
+    @include screen(sm) {
+      display: none;
+    }
+  }
+  &__content {
+    font-size: 20px;
+    width: 100%;
+    max-width: 730px;
+    padding: 1rem;
+    @include screen(sm) {
+      font-size: 32px;
+    }
+    p {
+      margin-block-end: 2rem;
+    }
+    a {
+      text-decoration: underline;
+      transition: color 0.1s ease-in-out;
+      &:hover {
+        color: #666;
+      }
+    }
+  }
+}

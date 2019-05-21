@@ -1,0 +1,44 @@
+.hero {
+  margin: 0 auto;
+  max-width: 510px;
+  width: 100%;
+  display: grid;
+  padding: 0 1rem;
+  font-size: 20px;
+  line-height: 1.2;
+  position: relative;
+  @include screen(sm) {
+    display: block;
+    padding: 0;
+    font-size: 32px;
+    line-height: 1;
+  }
+  &__intro {
+    font-family: var(--font-sans--accent);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 15rem;
+    top: 3rem;
+    font-size: 32px;
+    @include screen(sm) {
+      text-align: center;
+      position: relative;
+      left: unset;
+      top: unset;
+    }
+  }
+  &__name {
+    font-family: var(--font-blackletter);
+    line-height: 0.93;
+    font-size: 110px;
+    @include screen(sm) {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 150px;
+    }
+  }
+  &__blurb {
+    line-height: 1.25;
+  }
+}

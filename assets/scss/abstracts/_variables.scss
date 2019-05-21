@@ -1,0 +1,14 @@
+:root {
+  --font-blackletter: "Hartwig-Schrift", var(--font-sans--accent);
+  --font-sans--accent: "Founders Grotesk", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "San Francisco Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+$breakpoints: (
+  xs: 400px,
+  sm: 600px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1200px
+);

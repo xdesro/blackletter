@@ -25,6 +25,6 @@ export default {
 
 
 <style lang="scss">
-@import "~assets/scss/index";
+@import "~assets/scss/main";
 </style>
  

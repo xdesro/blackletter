@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("~assets/fonts/founders-grotesk/FoundersGrotTest-Bold.woff");
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Hartwig-Schrift";
+  src: url("~assets/fonts/hartwig-schrift/hartwig-schrift-webfont.woff2")
+      format("woff2"),
+    url("~assets/fonts/hartwig-schrift/hartwig-schrift-webfont.woff")
+      format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}

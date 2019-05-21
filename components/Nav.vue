@@ -1,5 +1,5 @@
 <template>
-  <nav class="header__nav nav">
+  <nav class="header__nav nav" :class="navAlignTop ? 'nav--align-top' : ''">
     <ul class="nav__list">
       <li class="nav__list-item">
         <nuxt-link class="nav__link" to="/" exact>about</nuxt-link>
@@ -17,42 +17,16 @@
   </nav>
 </template>
 
-<style lang="scss">
-.nav {
-  text-align: right;
-  &__list {
-    list-style-type: none;
-    font-family: var(--font-sans--accent);
-    text-transform: uppercase;
-    line-height: 2;
-    color: #666;
+<script>
+export default {
+  computed: {
+    navAlignTop() {
+      return this.$store.state.navAlignTop;
+    }
+  },
+  mounted() {
+    console.log(this.navAlignTop);
   }
-  &__link {
-    padding: 8px 0;
-    position: relative;
-    transition: color 0.1s;
+};
+</script>
 
-    &:before {
-      content: "";
-      width: 0;
-      height: 1px;
-      top: 50%;
-      transform: translateY(-50%);
-      position: absolute;
-      right: calc(100% + 10px);
-      display: block;
-      background-color: #030303;
-      transition: width 0.2s ease-in-out;
-    }
-    &:hover {
-      color: #030303;
-      &:before {
-        width: 60px;
-      }
-    }
-    &--active {
-      color: #030303;
-    }
-  }
-}
-</style>

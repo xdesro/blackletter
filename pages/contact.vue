@@ -2,6 +2,7 @@
   <main class="main">
     <article class="page">
       <p class="page__counter">03.</p>
+      <h1 class="page__title">{{title}}</h1>
       <section class="page__content">
         <p>
           I’m most active and reachable
@@ -23,13 +24,15 @@ export default {
     return {
       statueRotation: -0.8,
       title: "contact",
-      backgroundText: ["contact–", "vertical"]
+      backgroundText: ["contact–", "vertical"],
+      navAlignTop: true
     };
   },
   mounted() {
     this.$store.commit("SET_PAGE_TITLE", this.title);
     this.$store.commit("SET_BACKGROUND_TEXT", this.backgroundText);
     this.$store.commit("SET_STATUE_ROTATION", this.statueRotation);
+    this.$store.commit("SET_NAV_ALIGNMENT", this.navAlignTop);
   }
 };
 </script>

@@ -46,7 +46,9 @@ export default {
   },
   mounted() {
     document.addEventListener("mousemove", this.handleMouseMove);
-    TweenLite.ticker.addEventListener("tick", this.updateAnimation);
+    this.$nextTick(() => {
+      TweenLite.ticker.addEventListener("tick", this.updateAnimation);
+    });
   },
   methods: {
     handleMouseMove(e) {
@@ -58,11 +60,13 @@ export default {
     updateAnimation() {
       this.$el.style.setProperty(
         "--translateRow1",
-        `${this.translateEase.row1 * 0.12 - 66}%`
+        `${this.translateEase.row1 * 0.12 -
+          this.$el.style.getPropertyValue("--translateRow1-init")}%`
       );
       this.$el.style.setProperty(
         "--translateRow2",
-        `${this.translateEase.row1 * -0.25 + 20}%`
+        `${this.translateEase.row1 * -0.25 +
+          this.$el.style.getPropertyValue("--translateRow2-init")}%`
       );
     }
   }
@@ -71,48 +75,4 @@ export default {
 
 
 <style lang="scss">
-.background-text {
-  --translateRow1: -66%;
-  --translateRow2: 20%;
-  -webkit-text-stroke: 1px #d5d5d5;
-  -webkit-text-fill-color: transparent;
-  font-family: var(--font-sans--accent);
-  font-size: 15vw;
-  position: fixed;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  text-transform: uppercase;
-  user-select: none;
-  pointer-events: none;
-  &__horizontal {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &__vertical {
-    font-size: 150px;
-    transform: rotate(90deg) translateX(-50%);
-    transform-origin: 0 100%;
-    display: inline-block;
-    top: 50%;
-    overflow: hidden;
-    width: 270vh;
-    left: 250px;
-    position: absolute;
-  }
-  &__row {
-    white-space: nowrap;
-    &:first-child {
-      margin-bottom: -50px;
-      transform: translateX(var(--translateRow1));
-    }
-    &:last-child {
-      transform: translateX(var(--translateRow2));
-    }
-  }
-}
 </style>
