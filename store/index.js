@@ -1,6 +1,7 @@
 export const state = () => {
   return {
     pageTitle: "",
+    pageNumber: 0,
     backgroundText: {
       text: "Summer 2019",
       layout: "horizontal"
@@ -13,8 +14,11 @@ export const state = () => {
 };
 
 export const mutations = {
-  SET_PAGE_TITLE(state, title) {
-    state.pageTitle = title;
+  SET_PAGE_TITLE(state, pageTitle) {
+    state.pageTitle = pageTitle;
+  },
+  SET_PAGE_NUMBER(state, pageNumber) {
+    state.pageNumber = pageNumber;
   },
   SET_BACKGROUND_TEXT(state, backgroundSettings) {
     state.backgroundText = {

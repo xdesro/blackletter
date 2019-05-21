@@ -1,8 +1,8 @@
 <template>
   <main class="main">
     <article class="page">
-      <p class="page__counter">01.</p>
-      <h1 class="page__title">{{title}}</h1>
+      <p class="page__counter">0{{pageNumber}}.</p>
+      <h1 class="page__title">{{pageTitle}}</h1>
       <section class="page__content">
         <p>
           I’ve designed and coded projects ranging from Dungeons &amp; Dragons
@@ -33,13 +33,15 @@ export default {
   data() {
     return {
       statueRotation: -0.4,
-      title: "work",
+      pageTitle: "work",
+      pageNumber: 1,
       backgroundText: ["work–", "vertical"],
       navAlignTop: true
     };
   },
   mounted() {
-    this.$store.commit("SET_PAGE_TITLE", this.title);
+    this.$store.commit("SET_PAGE_TITLE", this.pageTitle);
+    this.$store.commit("SET_PAGE_NUMBER", this.pageNumber);
     this.$store.commit("SET_BACKGROUND_TEXT", this.backgroundText);
     this.$store.commit("SET_STATUE_ROTATION", this.statueRotation);
     this.$store.commit("SET_NAV_ALIGNMENT", this.navAlignTop);

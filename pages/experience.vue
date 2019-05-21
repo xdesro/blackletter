@@ -1,8 +1,8 @@
 <template>
   <main class="main">
     <article class="page">
-      <p class="page__counter">02.</p>
-      <h1 class="page__title">{{title}}</h1>
+      <p class="page__counter">0{{pageNumber}}.</p>
+      <h1 class="page__title">{{pageTitle}}</h1>
       <section class="page__content">
         <p>I’ve been in interaction- and CSS-focused UI development gigs since 2015, most recently working at Promontech and Universal Mind. I’m really into SCSS, Vue, and JAMstack architecture.</p>
         <p>
@@ -22,13 +22,15 @@ export default {
   data() {
     return {
       statueRotation: -0.6,
-      title: "experience",
+      pageTitle: "experience",
+      pageNumber: 2,
       backgroundText: ["experience–", "vertical"],
       navAlignTop: true
     };
   },
   mounted() {
-    this.$store.commit("SET_PAGE_TITLE", this.title);
+    this.$store.commit("SET_PAGE_TITLE", this.pageTitle);
+    this.$store.commit("SET_PAGE_NUMBER", this.pageNumber);
     this.$store.commit("SET_BACKGROUND_TEXT", this.backgroundText);
     this.$store.commit("SET_STATUE_ROTATION", this.statueRotation);
     this.$store.commit("SET_NAV_ALIGNMENT", this.navAlignTop);

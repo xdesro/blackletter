@@ -15,3 +15,39 @@
   font-weight: normal;
   font-style: normal;
 }
+.list {
+  padding: 0;
+  list-style-type: none;
+  &--icons {
+    font-weight: bold;
+    line-height: 2;
+    font-size: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    @include screen(sm) {
+      font-size: 24px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .list__link {
+      text-decoration: none;
+      display: grid;
+      grid-gap: 10px;
+      grid-auto-flow: column;
+      align-items: center;
+      justify-content: start;
+      &:hover {
+        .list__icon {
+          fill: #666;
+        }
+      }
+    }
+  }
+  &__item {
+  }
+  &__icon {
+    width: 18px;
+    @include screen(sm) {
+      width: 24px;
+    }
+  }
+}
