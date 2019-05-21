@@ -91,7 +91,7 @@ export default {
     }
   },
   mounted() {
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth * 2, window.innerHeight * 2);
     this.camera.position.y = 15;
     this.camera.position.z = 30;
     this.scene.add(this.camera);
@@ -174,6 +174,10 @@ export default {
   z-index: -2;
   opacity: 0.3;
   background: #efefef;
+}
+canvas {
+  width: 100vw !important;
+  height: 100vh !important;
 }
 .hercules-enter-active,
 .hercules-leave-active {

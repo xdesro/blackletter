@@ -1,9 +1,10 @@
 .nav {
   text-align: right;
   padding-right: 20px;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
+  position: relative;
+  //   position: fixed;
+  //   bottom: 50px;
+  //   right: 50px;
   transition: bottom 0.5s ease-in-out;
   @include screen(sm) {
     position: relative;
@@ -26,12 +27,12 @@
       content: unset;
     }
   }
-  &--align-top {
-    bottom: calc(100vh - 120px);
-    @include screen(sm) {
-      bottom: unset;
-    }
-  }
+  //   &--align-top {
+  //     bottom: calc(100vh - 120px);
+  //     @include screen(sm) {
+  //       bottom: unset;
+  //     }
+  //   }
   &__list {
     list-style-type: none;
     font-family: var(--font-sans--accent);

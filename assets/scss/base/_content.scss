@@ -26,14 +26,17 @@ a {
   text-decoration: inherit;
 }
 .app {
-  position: fixed;
+  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
   z-index: 1;
   display: grid;
+  //   @include screen(sm) {
+  //     position: fixed;
+  //     overflow: hidden;
+  //   }
 }
 .main {
   // height: auto;
@@ -64,7 +67,7 @@ a {
     font-family: var(--font-sans--accent);
     font-size: 16vw;
     color: #030303;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: #efefef;
     -webkit-text-stroke: 1px #666;
     padding: 0 1rem;
     text-transform: uppercase;

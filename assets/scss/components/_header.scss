@@ -6,7 +6,6 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  padding: 50px;
   grid-template:
     "letterhead pageNumber"
     "date nav";
@@ -14,7 +13,11 @@
   align-content: space-between;
   font-family: var(--font-sans--accent);
   text-transform: uppercase;
+  padding: 30px;
   line-height: 0.9;
+  @include screen(sm) {
+    padding: 50px;
+  }
   &__letterhead {
     grid-area: letterhead;
     padding-bottom: 40px;
@@ -64,6 +67,9 @@
     }
   }
   &__nav {
-    grid-area: nav;
+    grid-area: pageNumber;
+    @include screen(sm) {
+      grid-area: nav;
+    }
   }
 }
