@@ -1,40 +1,33 @@
 <template>
-  <main class="main">
-    <article class="page">
-      <p class="page__counter">0{{pageNumber}}.</p>
-      <h1 class="page__title">{{pageTitle}}</h1>
-      <section class="page__content">
-        <p>
-          I’m most active and reachable
-          <a href="https://twitter.com/xdesro">on Twitter</a> or
-          <a href="mailto:yo@henry.codes">via email</a>, but you can find me most places on the internet as
-          <strong>@xdesro</strong>.
-        </p>
-        <ul class="list list--icons">
-          <li
-            v-for="(socialLink, index) of socialLinks"
-            :key="index"
-            :class="'list__item list__item--' + socialLink.name"
-          >
-            <a class="list__link" :href="socialLink.url">
-              <Icon :icon="socialLink.name" class="list__icon"/>
-              <span class="list__text">{{ socialLink.name }}</span>
-            </a>
-          </li>
-        </ul>
-        <!-- <ul class="social-list">
-            <li class="social-list__item"></li>
-        </ul>-->
-      </section>
-    </article>
-  </main>
+  <PageContent :page-title="pageTitle" :page-number="pageNumber">
+    <p>
+      I’m most active and reachable
+      <a href="https://twitter.com/xdesro">on Twitter</a> or
+      <a href="mailto:yo@henry.codes">via email</a>, but you can find me most places on the internet as
+      <strong>@xdesro</strong>.
+    </p>
+    <ul class="list list--icons">
+      <li
+        v-for="(socialLink, index) of socialLinks"
+        :key="index"
+        :class="'list__item list__item--' + socialLink.name"
+      >
+        <a class="list__link" :href="socialLink.url">
+          <Icon :icon="socialLink.name" class="list__icon"/>
+          <span class="list__text">{{ socialLink.name }}</span>
+        </a>
+      </li>
+    </ul>
+  </PageContent>
 </template>
 
 <script>
-import Icon from '~/components/Icon'
+import PageContent from "~/components/PageContent";
+import Icon from "~/components/Icon";
 
 export default {
   components: {
+    PageContent,
     Icon
   },
   data() {

@@ -1,7 +1,9 @@
 <template>
   <div class="app">
     <Header/>
-    <nuxt/>
+    <main class="main">
+      <nuxt/>
+    </main>
     <BackgroundText text="Summer 2019"/>
     <no-ssr>
       <Hercules/>

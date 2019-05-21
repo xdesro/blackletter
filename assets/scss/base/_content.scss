@@ -33,13 +33,8 @@ a {
   bottom: 0;
   z-index: 1;
   display: grid;
-  //   @include screen(sm) {
-  //     position: fixed;
-  //     overflow: hidden;
-  //   }
 }
 .main {
-  // height: auto;
   display: inline-grid;
   justify-content: center;
   position: relative;
@@ -51,6 +46,7 @@ a {
 }
 
 .page {
+  max-width: 100vw;
   &__counter {
     font-size: 16vw;
     font-family: var(--font-sans--accent);
