@@ -1,5 +1,5 @@
 <template>
-  <div class="section__head" v-if="pageNumber > 0">
+  <div v-if="pageNumber > 0" class="section__head">
     <transition name="page-counter">
       <p class="page__counter" :v-bind="pageNumber">0{{pageNumber}}.</p>
     </transition>

@@ -37,18 +37,4 @@ export default {
 </script>
 
 <style lang="scss">
-.accent-title-enter-active,
-.accent-title-leave-active {
-  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-.accent-title-enter,
-.accent-title-leave-to {
-  opacity: 0;
-  transform: translateX(40vw);
-}
-.accent-title-leave,
-.accent-title-enter-to {
-  opacity: 1;
-  transform: translateX(0);
-}
 </style>

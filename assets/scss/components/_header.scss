@@ -82,11 +82,14 @@
     }
   }
   &__date {
-    grid-area: date;
-    display: none;
     align-items: end;
+    grid-area: letterhead;
+    margin-top: 30px;
+    color: #666;
     @include screen(sm) {
+      color: #030303;
       display: grid;
+      grid-area: date;
     }
   }
   &__nav {
