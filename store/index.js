@@ -35,6 +35,6 @@ export const mutations = {
   },
   TOGGLE_COLOR_MODE(state) {
     state.darkMode = !state.darkMode;
-    console.log(state.darkMode);
+    // localStorage.setItem("darkMode", state.darkMode);
   }
 };

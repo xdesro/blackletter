@@ -21,7 +21,8 @@
     "lodash": "^4.17.11",
     "nuxt": "^2.4.0",
     "three": "^0.104.0",
-    "three-gltf-loader": "^1.104.0"
+    "three-gltf-loader": "^1.104.0",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",

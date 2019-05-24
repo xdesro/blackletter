@@ -16,7 +16,7 @@ export default {
   },
   loading: { color: "var(--color-primary)" },
   css: ["~/assets/scss/main.scss"],
-  plugins: [],
+  plugins: [{ src: "~/plugins/LocalStorage.js", ssr: false }],
   build: {
     transpile: ["three/examples/jsm/loaders/GLTFLoader"],
     extend(config, ctx) {
