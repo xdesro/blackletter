@@ -172,8 +172,8 @@ export default {
   top: 0;
   left: 45vw;
   z-index: -2;
-  opacity: 0.3;
-  background: #efefef;
+  opacity: var(--statue-opacity);
+  background: var(--color-neutral);
 }
 canvas {
   width: 100vw !important;

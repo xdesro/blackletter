@@ -4,6 +4,13 @@
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-sans: "San Francisco Display", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --color-primary: #030303;
+  --color-secondary: #666;
+  --color-tertiary: #d5d5d5;
+  --color-neutral: #efefef;
+
+  --statue-opacity: 0.1;
 }
 $breakpoints: (
   xs: 400px,

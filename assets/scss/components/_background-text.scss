@@ -9,7 +9,7 @@
     --translateRow1-init: -66;
     --translateRow2-init: 20;
   }
-  -webkit-text-stroke: 1px #d5d5d5;
+  -webkit-text-stroke: 1px var(--color-tertiary);
   -webkit-text-fill-color: transparent;
   font-family: var(--font-sans--accent);
   font-size: 15vw;

@@ -2,6 +2,7 @@ export const state = () => {
   return {
     pageTitle: "",
     pageNumber: 0,
+    darkMode: false,
     backgroundText: {
       text: "Summer 2019",
       layout: "horizontal"
@@ -31,5 +32,9 @@ export const mutations = {
   },
   SET_NAV_ALIGNMENT(state, alignment) {
     state.navAlignTop = alignment;
+  },
+  TOGGLE_COLOR_MODE(state) {
+    state.darkMode = !state.darkMode;
+    console.log(state.darkMode);
   }
 };

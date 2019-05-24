@@ -14,7 +14,7 @@ export default {
   router: {
     linkActiveClass: "nav__link--active"
   },
-  loading: { color: "#030303" },
+  loading: { color: "var(--color-primary)" },
   css: ["~/assets/scss/main.scss"],
   plugins: [],
   build: {

@@ -16,7 +16,7 @@
     content: "";
     width: 10px;
     height: 100%;
-    background-color: #030303;
+    background-color: var(--color-primary);
     display: block;
     right: 0;
     top: 0;
@@ -37,7 +37,7 @@
     list-style-type: none;
     font-family: var(--font-sans--accent);
     text-transform: uppercase;
-    color: #666;
+    color: var(--color-secondary);
     line-height: 1.2;
     @include screen(sm) {
       line-height: 2;
@@ -57,17 +57,17 @@
       position: absolute;
       right: calc(100% + 10px);
       display: block;
-      background-color: #030303;
+      background-color: var(--color-primary);
       transition: width 0.2s ease-in-out;
     }
     &:hover {
-      color: #030303;
+      color: var(--color-primary);
       &:before {
         width: 60px;
       }
     }
     &--active {
-      color: #030303;
+      color: var(--color-primary);
     }
   }
 }

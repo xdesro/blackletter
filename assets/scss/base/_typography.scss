@@ -35,9 +35,10 @@
       grid-auto-flow: column;
       align-items: center;
       justify-content: start;
+      fill: var(--color-primary);
       &:hover {
         .list__icon {
-          fill: #666;
+          fill: var(--color-secondary);
         }
       }
     }

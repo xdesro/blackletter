@@ -8,11 +8,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  color: #030303;
+  color: var(--color-primary);
 }
 body {
   -webkit-overflow-scrolling: auto;
-  background: #efefef;
+  background: var(--color-neutral);
 }
 
 *,
@@ -62,9 +62,9 @@ a {
     margin-bottom: 40px;
     font-family: var(--font-sans--accent);
     font-size: 16vw;
-    color: #030303;
-    -webkit-text-fill-color: #efefef;
-    -webkit-text-stroke: 1px #666;
+    color: var(--color-primary);
+    -webkit-text-fill-color: var(--color-neutral);
+    -webkit-text-stroke: 1px var(--color-secondary);
     padding: 0 1rem;
     text-transform: uppercase;
     // &:after {
@@ -88,7 +88,7 @@ a {
     a {
       text-decoration: underline;
       &:hover {
-        color: #666;
+        color: var(--color-secondary);
       }
     }
   }

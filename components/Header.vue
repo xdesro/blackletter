@@ -14,6 +14,7 @@
     </div>
     <div class="header__date">
       <span>summer 2019</span>
+      <ThemeToggle/>
     </div>
     <Nav/>
   </header>
@@ -21,9 +22,11 @@
 
 <script>
 import Nav from "~/components/Nav";
+import ThemeToggle from "~/components/ThemeToggle";
 export default {
   components: {
-    Nav
+    Nav,
+    ThemeToggle
   },
   computed: {
     pageNumber() {
