@@ -1,7 +1,7 @@
 <template>
   <button class="theme-toggle" @click="toggleColorMode">
     <template v-if="darkMode">🌙</template>
-    <template v-else>🌞</template>
+    <template v-else>☀️</template>
   </button>
 </template>
 

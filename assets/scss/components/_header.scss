@@ -1,11 +1,11 @@
 .header {
   display: grid;
   z-index: 0;
-  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
+  position: absolute;
   grid-template:
     "letterhead pageNumber"
     "date nav";
@@ -13,10 +13,11 @@
   align-content: space-between;
   font-family: var(--font-sans--accent);
   text-transform: uppercase;
-  padding: 30px;
+  padding: 2rem 1rem;
   line-height: 0.9;
-  @include screen(sm) {
+  @include screen(md) {
     padding: 50px;
+    position: fixed;
   }
   &__letterhead {
     grid-area: letterhead;
@@ -71,7 +72,7 @@
     text-align: right;
     padding-right: 20px;
     display: none;
-    @include screen(sm) {
+    @include screen(md) {
       display: block;
     }
     &:after {
@@ -93,10 +94,9 @@
     grid-auto-flow: column;
     align-items: center;
     z-index: 1;
-    @include screen(sm) {
+    @include screen(md) {
       margin-top: 0;
       align-self: end;
-
       color: var(--color-primary);
       display: grid;
       grid-area: date;
@@ -104,7 +104,7 @@
   }
   &__nav {
     grid-area: pageNumber;
-    @include screen(sm) {
+    @include screen(md) {
       grid-area: nav;
     }
   }
