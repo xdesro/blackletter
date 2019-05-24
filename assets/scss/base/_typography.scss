@@ -1,6 +1,11 @@
 @font-face {
   font-family: "Founders Grotesk";
-  src: url("~assets/fonts/founders-grotesk/FoundersGrotTest-Bold.woff");
+  src: url("~assets/fonts/founders-grotesk/FoundersGroteskWeb-Bold.woff")
+      format("woff"),
+    url("~assets/fonts/founders-grotesk/FoundersGroteskWeb-Bold.woff2")
+      format("woff2"),
+    url("~assets/fonts/founders-grotesk/FoundersGroteskWeb-Bold.eot")
+      format("embedded-opentype");
   font-display: swap;
   font-weight: bold;
   font-style: normal;
