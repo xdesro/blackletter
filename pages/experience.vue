@@ -2,7 +2,7 @@
   <section class="page__content">
     <p>I’ve been in interaction- and CSS-focused UI development gigs since 2015, most recently working at Promontech and Universal Mind. I’m really into SCSS, Vue, and JAMstack architecture.</p>
     <p>
-      I’m always open to new opportunities in creative dev or style-code-/UI-centric roles. Check out
+      I’m always open to new opportunities in creative dev, as well as style-code- or UI-centric roles. Check out
       <a
         href="#"
       >my resume</a>, and

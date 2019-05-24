@@ -4,8 +4,10 @@
       I’ve designed and coded projects ranging from Dungeons &amp; Dragons
       <a
         href="https://crit.fail"
-      >companion apps</a>, large scale end-to-end mortgage fullfilment
-      <a href="https://promontech.com">app ecosystems</a>, and
+      >companion apps</a>, to large scale end-to-end mortgage fullfilment
+      <a
+        href="https://promontech.com"
+      >app ecosystems</a>, to
       <a href="https://divinegoddessjessica.com">websites for dominatrices</a>.
     </p>
     <p>

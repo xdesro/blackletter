@@ -3,6 +3,9 @@ import pkg from "./package";
 export default {
   mode: "universal",
   head: {
+    htmlAttrs: {
+      lang: "en"
+    },
     title: `Henry Desroches | Creative Developer`,
     meta: [
       { charset: "utf-8" },
