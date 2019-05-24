@@ -15,6 +15,23 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+  src: url("~assets/fonts/san-francisco/sanfranciscodisplay-medium-webfont.woff")
+    format("woff");
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("~assets/fonts/san-francisco/sanfranciscodisplay-bold-webfont.woff")
+    format("woff");
+}
+
 .list {
   padding: 0;
   list-style-type: none;
