@@ -8,8 +8,8 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: pkg.description },
-      { name: "theme-color", content: "#FDB4AA" },
-      { name: "msapplication-TileColor", content: "#FDB4AA" },
+      { name: "theme-color", content: "#030303" },
+      { name: "msapplication-TileColor", content: "#030303" },
       { name: "image", content: "https://henry.codes/opengraph.jpg" },
       { itemprop: "name", content: "Creative Developer // Henry Desroches" },
       {
@@ -67,7 +67,7 @@ export default {
         href: "/favicon-16x16.png"
       },
       { rel: "manifest", href: "/site.webmanifest" },
-      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#FDB4AA" }
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#030303" }
     ]
   },
   router: {
