@@ -1,6 +1,4 @@
 <template>
-  <!-- <main class="main"> -->
-  <!-- <PageContent :page-title="pageTitle" :page-number="pageNumber"> -->
   <section class="page__content">
     <p>
       I’ve designed and coded projects ranging from Dungeons &amp; Dragons
@@ -20,14 +18,10 @@
       >boilerplate</a>.
     </p>
   </section>
-
-  <!-- </PageContent> -->
 </template>
 
 <script>
-// import PageContent from "~/components/PageContent";
 export default {
-  // components: { PageContent },
   data() {
     return {
       statueRotation: -0.4,

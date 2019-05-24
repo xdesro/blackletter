@@ -1,5 +1,4 @@
 <template>
-  <!-- <PageContent :page-title="pageTitle" :page-number="pageNumber"> -->
   <section class="page__content">
     <p>
       I’m most active and reachable
@@ -19,17 +18,14 @@
         </a>
       </li>
     </ul>
-    <!-- </PageContent> -->
   </section>
 </template>
 
 <script>
-// import PageContent from "~/components/PageContent";
 import Icon from "~/components/Icon";
 
 export default {
   components: {
-    // PageContent,
     Icon
   },
   data() {

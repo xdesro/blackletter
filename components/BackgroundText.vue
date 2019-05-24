@@ -1,26 +1,24 @@
 <template>
   <div class="background-text" role="presentation">
-    <template v-if="layout == 'horizontal'">
-      <div ref="child" class="background-text__horizontal">{{text}}</div>
-    </template>
-    <template v-else>
-      <div ref="child" class="background-text__vertical">
-        <div class="background-text__row">
-          <span
-            v-for="(iteration, index) of iterations"
-            :key="index"
-            class="background-text__inner"
-          >{{text}}</span>
-        </div>
-        <div class="background-text__row">
-          <span
-            v-for="(iteration, index) of iterations"
-            :key="index"
-            class="background-text__inner"
-          >{{text}}</span>
-        </div>
+    <transition name="background-text__horizontal" mode="out-in">
+      <div v-if="layout == 'horizontal'" ref="child" class="background-text__horizontal">{{text}}</div>
+    </transition>
+    <div v-if="layout == 'vertical'" ref="child" class="background-text__vertical">
+      <div class="background-text__row">
+        <span
+          v-for="(iteration, index) of iterations"
+          :key="index"
+          class="background-text__inner"
+        >{{text}}</span>
       </div>
-    </template>
+      <div class="background-text__row">
+        <span
+          v-for="(iteration, index) of iterations"
+          :key="index"
+          class="background-text__inner"
+        >{{text}}</span>
+      </div>
+    </div>
   </div>
 </template>
 
