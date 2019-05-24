@@ -2,12 +2,8 @@
   <div class="app">
     <Header/>
     <main class="main">
-      <nuxt name="hero"/>
-      <article :id="'page-'+pageNumber" class="page">
-        <p class="page__counter" :v-bind="pageNumber">0{{pageNumber}}.</p>
-        <transition name="page-title" mode="out-in">
-          <h1 :key="pageTitle" class="page__title">{{pageTitle}}</h1>
-        </transition>
+      <article class="page">
+        <SectionHead/>
         <nuxt/>
       </article>
     </main>
@@ -22,12 +18,14 @@
 import Header from "~/components/Header";
 import BackgroundText from "~/components/BackgroundText";
 import Hercules from "~/components/Hercules";
+import SectionHead from "~/components/SectionHead";
 
 export default {
   components: {
     Header,
     BackgroundText,
-    Hercules
+    Hercules,
+    SectionHead
   },
   computed: {
     pageNumber() {

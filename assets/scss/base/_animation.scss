@@ -1,7 +1,7 @@
 .page {
   &-enter-active,
   &-leave-active {
-    transition: opacity 0.5s;
+    transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   &-enter,
   &-leave-to {
@@ -24,18 +24,31 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-
+.page-counter {
+  &-enter-active,
+  &-leave-active {
+    transition: all 0.2s ease-in-out;
+    // position: absolute;
+  }
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+}
 .background-text {
-  &__horizontal {
+  &__horizontal,
+  &__vertical {
     &-enter-active,
     &-leave-active {
-      transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
     &-enter {
-      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+      opacity: 0;
+      // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     }
     &-leave-to {
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      opacity: 0;
+      // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
   }
 }

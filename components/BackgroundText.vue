@@ -3,22 +3,24 @@
     <transition name="background-text__horizontal" mode="out-in">
       <div v-if="layout == 'horizontal'" ref="child" class="background-text__horizontal">{{text}}</div>
     </transition>
-    <div v-if="layout == 'vertical'" ref="child" class="background-text__vertical">
-      <div class="background-text__row">
-        <span
-          v-for="(iteration, index) of iterations"
-          :key="index"
-          class="background-text__inner"
-        >{{text}}</span>
+    <transition name="background-text__vertical" mode="out-in">
+      <div v-if="layout == 'vertical'" :key="text" ref="child" class="background-text__vertical">
+        <div class="background-text__row">
+          <span
+            v-for="(iteration, index) of iterations"
+            :key="index"
+            class="background-text__inner"
+          >{{text}}</span>
+        </div>
+        <div class="background-text__row">
+          <span
+            v-for="(iteration, index) of iterations"
+            :key="index"
+            class="background-text__inner"
+          >{{text}}</span>
+        </div>
       </div>
-      <div class="background-text__row">
-        <span
-          v-for="(iteration, index) of iterations"
-          :key="index"
-          class="background-text__inner"
-        >{{text}}</span>
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 

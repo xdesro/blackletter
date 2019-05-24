@@ -48,13 +48,13 @@ a {
 .page {
   max-width: 100vw;
   &__counter {
-    font-size: 16vw;
     font-family: var(--font-sans--accent);
     padding: 0 1rem;
     line-height: 0.6;
+    font-size: 16vw;
     @include screen(sm) {
-      font-size: 220px;
       line-height: 0.9;
+      font-size: 220px;
     }
   }
   &__title {

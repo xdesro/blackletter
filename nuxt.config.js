@@ -12,20 +12,7 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   router: {
-    linkActiveClass: "nav__link--active",
-    extendRoutes(routes, resolve) {
-      let index = routes.findIndex(route => route.name === "index");
-      routes[index] = {
-        ...routes[index],
-        components: {
-          default: routes[index].component,
-          hero: resolve(__dirname, "components/Hero.vue")
-        },
-        chunkNames: {
-          hero: "components/Hero"
-        }
-      };
-    }
+    linkActiveClass: "nav__link--active"
   },
   loading: { color: "#030303" },
   css: ["~/assets/scss/main.scss"],
