@@ -1,3 +1,5 @@
+![Repository header image](https://repository-images.githubusercontent.com/187372749/104bc300-7fcb-11e9-9429-8ae934c93fd0)
+
 # ✨ Henry Desroches | Personal Site
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0c642719-192c-477e-9f05-f1ef8ed9d5f8/deploy-status)](https://app.netlify.com/sites/wonderful-meitner-eac7db/deploys)
