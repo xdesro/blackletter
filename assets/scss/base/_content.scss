@@ -8,6 +8,7 @@ html {
   box-sizing: border-box;
   color: var(--color-primary);
   font-family: var(--font-sans);
+  font-weight: 400;
 }
 body {
   -webkit-overflow-scrolling: auto;
@@ -66,9 +67,6 @@ a {
     -webkit-text-stroke: 1px var(--color-secondary);
     padding: 0 1rem;
     text-transform: uppercase;
-    // &:after {
-    //   content: "\2014";
-    // }
     @include screen(sm) {
       display: none;
     }
@@ -76,7 +74,9 @@ a {
   &__content {
     font-size: 20px;
     width: 100%;
+    letter-spacing: -0.01em;
     max-width: 730px;
+    font-weight: 430;
     padding: 1rem;
     @include screen(sm) {
       font-size: 32px;

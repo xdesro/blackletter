@@ -20,6 +20,23 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Inter UI';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-named-instance: 'Regular';
+  src: url("~assets/fonts/inter-ui/Inter-upright.var.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  font-named-instance: 'Italic';
+  src: url("~assets/fonts/inter-ui/Inter-italic.var.woff2") format("woff2");
+}
+
 
 .list {
   padding: 0;
