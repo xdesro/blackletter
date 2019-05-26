@@ -19,9 +19,6 @@
     font-family: var(--font-sans--accent);
     text-transform: uppercase;
     margin-bottom: 10px;
-    // position: absolute;
-    // left: 15rem;
-    // top: 3rem;
     padding-left: 1rem;
     font-size: 32px;
     @include screen(sm) {
@@ -56,13 +53,14 @@
     }
     &--mobile {
       display: inline-block;
+      fill: var(--color-primary);
       @include screen(sm) {
         display: none;
       }
     }
     &--desktop {
       display: none;
-
+      fill: var(--color-primary);
       @include screen(sm) {
         display: block;
       }
