@@ -24,12 +24,6 @@
       content: unset;
     }
   }
-  //   &--align-top {
-  //     bottom: calc(100vh - 120px);
-  //     @include screen(sm) {
-  //       bottom: unset;
-  //     }
-  //   }
   &__list {
     list-style-type: none;
     font-family: var(--font-sans--accent);
@@ -57,7 +51,7 @@
       background-color: var(--color-primary);
       transition: width 0.2s ease-in-out;
     }
-    &:hover {
+    &:hover, &:focus {
       color: var(--color-primary);
       &:before {
         width: 60px;

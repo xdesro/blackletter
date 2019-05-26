@@ -6,11 +6,11 @@
     </div>
     <div class="header__page-number">
       <p :key="pageNumber">0{{ pageNumber }}.</p>
-      <p class="header__accent-title">
+      <h2 class="header__accent-title">
         <transition name="accent-title">
           <span :key="pageTitle" class="header__accent-title-inner">{{ pageTitle }}</span>
         </transition>
-      </p>
+      </h2>
     </div>
     <div class="header__date">
       <span>summer 2019</span>
