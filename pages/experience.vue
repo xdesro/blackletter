@@ -4,7 +4,7 @@
     <p>
       I’m always open to new opportunities in creative dev, as well as style-code- or UI-centric roles. Check out
       <a
-        href="#"
+        href="https://resume.henry.codes"
       >my resume</a>, and
       <nuxt-link to="/contact">let’s chat</nuxt-link>!
     </p>
