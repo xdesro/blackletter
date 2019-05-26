@@ -37,7 +37,10 @@
   src: url("~assets/fonts/inter-ui/Inter-italic.var.woff2") format("woff2");
 }
 
+sup {
+    font-feature-settings: 'sups' 1;
 
+}
 .list {
   padding: 0;
   list-style-type: none;
