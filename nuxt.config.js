@@ -41,7 +41,7 @@ export default {
         content:
           "Personal site and portfolio of UX engineer and prolific twitter user xdesro."
       },
-      { name: "og:image", content: "https://henry.codes/opengraph-1.png" },
+      { name: "og:image", content: "https://henry.codes/open-graph.jpg" },
       { name: "og:url", content: "https://henry.codes" },
       {
         name: "og:site_name",
