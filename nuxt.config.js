@@ -79,6 +79,14 @@ export default {
   loading: { color: "var(--color-primary)" },
   css: ["~/assets/scss/main.scss"],
   plugins: [{ src: "~/plugins/LocalStorage.js", ssr: false }],
+  modules: [
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-92721708-1"
+      }
+    ]
+  ],
   build: {
     transpile: ["three/examples/jsm/loaders/GLTFLoader"],
     extend(config, ctx) {
