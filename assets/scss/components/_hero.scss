@@ -1,6 +1,6 @@
 .hero {
   margin: 0 auto;
-  max-width: 510px;
+  max-width: 531px;
   width: 100%;
   display: grid;
   padding: 0 1rem;
@@ -11,7 +11,7 @@
   @include screen(sm) {
     display: block;
     padding: 0;
-    font-size: 29px;
+    font-size: 28px;
     line-height: 1;
     letter-spacing: -0.02em;
   }
@@ -30,6 +30,10 @@
   }
   &__name {
     overflow: hidden;
+    margin-bottom: -2em;
+    @include screen(sm) {
+      margin-bottom: 0;
+    }
   }
   &__name-inner {
     font-family: var(--font-blackletter);
