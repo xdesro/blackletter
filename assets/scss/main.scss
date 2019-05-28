@@ -9,3 +9,11 @@
 @import "components/nav";
 @import "components/hero";
 @import "components/background-text";
+
+// Awwwards Nominee Ribbon
+#awwwards {
+  display: none;
+  @include screen(sm) {
+    display: block;
+  }
+}
